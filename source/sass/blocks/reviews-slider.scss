@@ -1,0 +1,154 @@
+.reviews {
+  position: relative;
+}
+
+.reviews__wrapper {
+  width: 100%;
+  max-width: 1366px;
+  padding: 14px 103px;
+  margin: 0 auto;
+  margin-bottom: 107px;
+
+  @include vp-1023 {
+    padding: 14px 45px;
+    margin-bottom: 86px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 53px;
+  }
+}
+
+.reviews__title {
+  font-family: $AlumniSans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #102654;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @include vp-1023 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+
+.reviews__container {
+  position: relative;
+  width: 48%;
+  margin: 0 auto;
+
+  @include vp-1023 {
+    width: 84%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.reviews__slider-list {
+  min-width: 0;
+}
+
+.reviews__slider-item {
+  display: grid;
+  grid-template-columns: min-content 6% 1fr;
+  grid-template-rows: min-content min-content;
+  padding: 55px;
+  background-color: #1c3374;
+  color: $color-default-white;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+
+  @include vp-1023 {
+    padding: 55px 63px;
+  }
+
+  @include vp-767 {
+    box-sizing: border-box;
+    grid-template-columns: 1fr 8% 1fr;
+    padding: 30px;
+    padding-bottom: 34px;
+  }
+}
+
+.reviews__slider-img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  margin-left: 5px;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  @include vp-767 {
+    margin-top: 13px;
+    margin-left: 13px;
+    width: 68px;
+    height: 68px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.reviews__slider-img img {
+  border-radius: 50%;
+}
+
+.reviews__slider-item h3 {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 12px;
+
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+
+  @include vp-1023 {
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    line-height: 130%;
+    margin-top: 20px;
+    margin-right: 13px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+}
+
+.reviews__slider-item p {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-default-white;
+  margin: 0;
+
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+
+  @include vp-767 {
+    text-align: center;
+    padding-top: 11px;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+}

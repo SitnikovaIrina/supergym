@@ -1,0 +1,161 @@
+.contacts {
+  width: 50%;
+  padding: 56px 50px;
+  padding-left: 120px;
+  padding-bottom: 40px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 63px 0;
+    padding-bottom: 45px;
+  }
+}
+
+.contacts h3 {
+  font-family: $AlumniSans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #102654;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @include vp-1023 {
+    width: 100%;
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 35px;
+  }
+}
+
+.contacts__list-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.contacts__list {
+  min-height: 115px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &--one {
+    position: relative;
+    padding-left: 5px;
+    width: 57%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: 0;
+      width: 1px;
+      height: 75%;
+      background-color: #74819c;
+    }
+  }
+
+  &--two {
+    width: 28%;
+  }
+
+  @include vp-1023 {
+    &--one {
+      width: 53%;
+
+      &::before {
+        top: 8px;
+        left: 100%;
+        right: 0;
+        height: 80%;
+      }
+    }
+
+    &--two {
+      width: 38%;
+    }
+  }
+
+  @include vp-767 {
+    &--one {
+      padding-left: 0;
+      width: 100%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--two {
+      width: 100%;
+    }
+  }
+}
+
+.contacts__item {
+  margin-bottom: 18px;
+}
+
+.contacts__item h4 {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: $dark-blue;
+  margin: 0;
+  margin-bottom: 3px;
+
+  @include vp-1023 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+}
+
+.contacts__item address,
+.contacts__item a,
+.contacts__item p {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: $dark-blue;
+  text-decoration: none;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 152.34%;
+  }
+}
+
+.contacts__item a {
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,44 @@
+.user-info {
+  width: 50%;
+  color: $color-default-white;
+  padding: 56px 10px;
+  padding-left: 0;
+  padding-bottom: 67px;
+
+  @include vp-1023 {
+    width: 100%;
+    padding: 61px 0;
+    padding-bottom: 69px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0;
+    padding-bottom: 70px;
+  }
+}
+
+.user-info h3 {
+  font-family: $AlumniSans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 32px;
+  }
+}

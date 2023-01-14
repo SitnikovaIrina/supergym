@@ -1,0 +1,99 @@
+.form {
+  @include vp-1023 {
+    width: 94%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.form div {
+  width: 72%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.form input {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  background-color: transparent;
+  border: none;
+  width: 46%;
+  padding: 7px;
+  padding-left: 0;
+  border-bottom: 1px solid #74819c;
+  margin-bottom: 28px;
+
+  &:hover {
+    border-color: #edf2ff;
+  }
+
+  &:active {
+    border-color: rgb(174, 185, 211);
+  }
+
+  &:focus {
+    border-color: #edf2ff;
+  }
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    width: 43%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.form button {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border: 3px solid $color-default-white;
+  background-color: transparent;
+  width: 72%;
+  padding: 16px;
+  user-select: none;
+
+  &:hover {
+    background-color: $color-default-white;
+    color: rgba(16, 38, 84, 1);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    margin-top: 10px;
+  }
+}

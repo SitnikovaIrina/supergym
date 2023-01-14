@@ -1,0 +1,321 @@
+.tickets {
+  position: relative;
+  background-color: #f8f9fc;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 321px;
+    height: 384px;
+    right: -17px;
+    bottom: -95px;
+    background-image: url("../img/svg/pancakes-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  @include vp-1023 {
+    &::before {
+      width: 348px;
+      height: 345px;
+      right: 0;
+      bottom: -74px;
+      background-image: url("../img/svg/pancakes-tablet.svg");
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+
+.tickets__wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 82px 103px;
+  padding-top: 121px;
+
+  @include vp-1023 {
+    padding: 56px 163px;
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px;
+    padding-bottom: 37px;
+  }
+}
+
+.tickets h2 {
+  font-family: $AlumniSans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: $dark-blue;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8px;
+
+  @include vp-1023 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 6px;
+  }
+}
+
+.tickets__tabs {
+  position: relative;
+}
+
+.tickets__tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  }
+}
+
+.tickets__tab-nav-link {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(16, 38, 84, 0.5);
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  padding: 10px 23px;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark-blue;
+    border-bottom: 2px solid #103aae;
+  }
+
+  @include vp-767 {
+    position: relative;
+    font-size: 16px;
+    padding: 14px 0;
+    border-bottom: none;
+
+    &:hover {
+      border-bottom: none;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #103aae;
+        bottom: -2px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.tickets__tab-nav-link.is-active {
+  border-color: $pink;
+  color: $dark-blue;
+  z-index: 1;
+
+  @include vp-767 {
+    border-color: unset;
+    border-bottom: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $pink;
+      bottom: -2px;
+      left: 0;
+    }
+  }
+}
+
+.tickets__tabs-body {
+  padding: 38px 0;
+
+  @include vp-1023 {
+    padding: 45px 0;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    padding: 33px 0;
+  }
+}
+
+.tickets__tabs-list {
+  display: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.tickets__tabs-list.is-active {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content;
+  gap: 40px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.tickets__tabs-item {
+  min-height: 448px;
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+  background-color: #ffffff;
+  border: 7px solid transparent;
+
+  &:hover,
+  &:focus {
+    border-image: linear-gradient(170deg, #d10a42 0, #00359f 100%);
+    border-image-slice: 1;
+  }
+
+  @include vp-767 {
+    min-height: 384px;
+  }
+}
+
+.tickets__tabs-item h3 {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  text-align: center;
+  color: #102654;
+  margin-top: 37px;
+  margin-bottom: 10px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 110.16%;
+    margin-top: 24px;
+  }
+}
+
+.tickets__tabs-item p {
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #495a7d;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.tickets__tabs-item span {
+  display: block;
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150%;
+  text-align: center;
+  color: #e8e8e8;
+  opacity: 0.48;
+
+  @include vp-767 {
+    font-size: 80px;
+  }
+}
+
+.tickets__tabs-item b {
+  display: block;
+  position: relative;
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  text-align: center;
+  color: #103aae;
+  margin-top: -96px;
+  margin-bottom: 33px;
+
+  @include vp-767 {
+    font-size: 48px;
+    margin-top: -77px;
+    margin-bottom: 29px;
+  }
+}
+
+.tickets__tabs-item svg {
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.tickets__tabs-item a {
+  display: block;
+  margin: 0 auto;
+  width: 68%;
+  font-family: $RobotoCondensed;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #102654;
+  border: 2px solid #102654;
+  padding: 25px;
+  user-select: none;
+
+  @include vp-1023 {
+    width: 54%;
+  }
+
+  @include vp-767 {
+    width: 90%;
+  }
+}
+
+.tickets__tabs-item:hover a,
+.tickets__tabs-item:focus a {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $color-default-white;
+  border: none;
+}
+
+.tickets__tabs-item a:focus {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $color-default-white;
+  border: none;
+}
