@@ -1,7 +1,7 @@
 .advantages {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 2%, #f8f9fc 2%);
 
-  @include vp-1023 {
+  @include vp-1199 {
     background-color: #f8f9fc;
     background-image: unset;
   }
@@ -11,10 +11,10 @@
   width: 100%;
   max-width: 1366px;
   padding: 85px 164px;
-  padding-top: 146px;
+  padding-top: 147px;
   margin: 0 auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 92px 45px;
   }
 
@@ -36,7 +36,7 @@
   margin: 0;
   margin-bottom: 27px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
   }
@@ -53,7 +53,7 @@
   grid-template-columns: 1fr 5% 23% 5% 1fr;
   grid-template-rows: 1fr 130px 1fr;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr 30px 1fr;
     grid-template-rows: min-content 1fr min-content;
   }
@@ -90,7 +90,7 @@
     grid-row: 3 / 4;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     &--area {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
@@ -146,7 +146,7 @@
     grid-row: 1 / 2;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     &--area,
     &--parking,
     &--comfort,
@@ -180,7 +180,7 @@
     grid-row: 1 / 2;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-left: 0;
   }
 
@@ -191,6 +191,7 @@
 
 .advantages__decor {
   margin: auto;
+  margin-bottom: 52px;
   width: 100%;
   height: 2px;
   background-color: rgba(209, 10, 66, 0.2);
@@ -205,7 +206,7 @@
     grid-row: 2 / 3;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     display: none;
   }
 }
@@ -222,7 +223,7 @@
   color: transparent;
   margin: 0;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 58px;
   }
 
@@ -241,7 +242,7 @@
   color: #2e35ac;
   margin-top: -22px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-top: -18px;
   }
 
@@ -261,7 +262,7 @@
   margin-bottom: 6px;
   padding-top: 21px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 20px;
     margin-bottom: 2px;
     padding-top: 15px;
@@ -305,7 +306,7 @@
   grid-column: 3 / 4;
   grid-row: 1 / 4;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin: 41px auto;
     margin-bottom: 30px;
     min-height: 239px;
@@ -345,7 +346,7 @@
   text-align: center;
   color: $color-default-white;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 22px;
     margin-bottom: 10px;
   }
@@ -366,7 +367,7 @@
   text-align: center;
   color: $color-default-white;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 45%;
     font-size: 16px;
   }

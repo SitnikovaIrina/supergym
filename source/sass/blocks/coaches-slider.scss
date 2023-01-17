@@ -9,7 +9,7 @@
   padding-bottom: 91px;
   margin: 0 auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-bottom: 100px;
   }
 
@@ -30,7 +30,7 @@
   margin: 0;
   margin-bottom: 48px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
     text-align: center;
@@ -77,6 +77,32 @@
   cursor: pointer;
   overflow: hidden;
   background-color: rgba(16, 38, 84, 0.89);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    //background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
+    background-color: rgba(16, 37, 84, 0.13);
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      background: none;
+    }
+  }
 }
 
 .coaches__slider-item-name {
@@ -123,7 +149,7 @@
     object-position: center -3px;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     aspect-ratio: 12 / 13.4;
   }
 
@@ -226,6 +252,10 @@
 
   &:hover {
     color: #102654;
+  }
+
+  &:focus {
+    outline: 1px solid #102654;
   }
 }
 

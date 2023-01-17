@@ -2,7 +2,7 @@
   display: block;
   padding: 10px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 10px 0;
   }
 
@@ -14,7 +14,7 @@
     padding: 10px;
     padding-top: 25px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       padding: 10px;
       padding-top: 22px;
     }
@@ -22,7 +22,7 @@
 }
 
 .logo__svg {
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 0;
     width: 82px;
     height: 17px;

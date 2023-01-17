@@ -4,7 +4,7 @@
   padding: 103px;
   margin: 0 auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 92px 45px;
     padding-bottom: 47px;
   }
@@ -26,7 +26,7 @@
   color: $dark-blue;
   margin-bottom: 35px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin: 0;
     margin-bottom: 40px;
     font-size: 42px;
@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
 
-  @include vp-1023 {
+  @include vp-1199 {
     flex-direction: column;
   }
 }
@@ -55,7 +55,7 @@
   list-style-type: none;
   width: 100%;
 
-  @include vp-1023 {
+  @include vp-1199 {
     display: flex;
   }
 
@@ -71,7 +71,7 @@
   min-width: 560px;
   margin-right: 40px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-bottom: 30px;
     margin-right: unset;
     width: unset;
@@ -88,13 +88,13 @@
   height: 462px;
   overflow: hidden;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 60%;
   }
 
   @include vp-767 {
-    width: 100%;
-    height: 299px;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -105,16 +105,17 @@
   object-fit: cover;
   object-position: -32px -180px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 150%;
     height: 150%;
     object-position: 0 -196px;
   }
 
   @include vp-767 {
-    width: 170%;
-    height: 170%;
-    object-position: 0 -148px;
+    aspect-ratio: 9 / 9.3;
+    object-position: unset;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -127,7 +128,7 @@
   padding: 37px;
   padding-left: 45px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 41%;
   }
 
@@ -225,7 +226,7 @@
     margin-bottom: 40px;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 50%;
     margin-bottom: 30px;
 
@@ -271,7 +272,7 @@
 }
 
 .stocks__item--first p {
-  @include vp-1023 {
+  @include vp-1199 {
     width: 88%;
   }
 

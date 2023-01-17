@@ -5,16 +5,16 @@
   &::before {
     position: absolute;
     content: "";
-    width: 321px;
+    width: 288px;
     height: 384px;
-    right: -17px;
+    right: 0;
     bottom: -95px;
     background-image: url("../img/svg/pancakes-desktop.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     &::before {
       width: 348px;
       height: 345px;
@@ -39,7 +39,7 @@
   padding: 82px 103px;
   padding-top: 121px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 56px 163px;
     padding-top: 100px;
   }
@@ -62,9 +62,10 @@
   margin: 0;
   margin-bottom: 8px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    margin-bottom: 12px;
   }
 
   @include vp-767 {
@@ -106,6 +107,11 @@
   &:hover {
     color: $dark-blue;
     border-bottom: 2px solid #103aae;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+    padding: 10px 27px;
   }
 
   @include vp-767 {
@@ -154,7 +160,7 @@
 .tickets__tabs-body {
   padding: 38px 0;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 45px 0;
   }
 
@@ -178,7 +184,7 @@
   grid-template-rows: min-content;
   gap: 40px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr;
     grid-template-rows: none;
   }
@@ -298,7 +304,7 @@
   padding: 25px;
   user-select: none;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 54%;
   }
 

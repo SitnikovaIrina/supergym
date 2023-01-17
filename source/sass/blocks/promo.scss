@@ -6,8 +6,8 @@
   margin: 0 auto;
   display: flex;
 
-  @include vp-1023 {
-    padding: 99px 45px;
+  @include vp-1199 {
+    padding: 98px 45px;
     padding-bottom: 45px;
   }
 
@@ -27,33 +27,45 @@
   align-items: center;
 
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 46px;
+    padding-top: 43px;
   }
 
   @include vp-767 {
     padding: 46px;
+    padding-bottom: 48px;
     width: 100%;
   }
 }
 
 .promo__conteiner {
   width: 70%;
+  //padding: 0 15px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 
-  @include vp-1023 {
+  @include vp-1279 {
+    width: 90%;
+  }
+
+  @include vp-1199 {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 2px;
   }
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
 }
 
 .promo__wrapper-text h2 {
-  width: 50%;
+  width: 60%;
   margin: 0;
-  padding: 10px;
+  padding: 16px;
+  padding-top: 3px;
   font-family: $AlumniSans;
   font-style: normal;
   font-weight: 600;
@@ -63,12 +75,7 @@
   text-transform: uppercase;
   color: $color-default-white;
 
-  @include vp-1279 {
-    width: 75%;
-    font-size: 60px;
-  }
-
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 48px;
     width: 60%;
     padding: 8px;
@@ -84,14 +91,21 @@
   margin: 0;
   list-style-type: none;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-left: 25px;
+  }
+}
+
+.promo__item {
+  margin-bottom: 4px;
+
+  @include vp-767 {
+    margin-bottom: 0;
   }
 }
 
 .promo__item h3 {
   margin: 0;
-  padding-top: 4px;
   font-family: $RobotoCondensed;
   font-style: normal;
   font-weight: 400;
@@ -99,7 +113,7 @@
   line-height: 150%;
   color: $color-default-white;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 12px;
     padding-top: 0;
   }
@@ -115,11 +129,7 @@
   margin-top: -3px;
   border-top: 1px solid $color-default-white;
 
-  @include vp-1279 {
-    font-size: 35px;
-  }
-
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 24px;
   }
 }
@@ -134,7 +144,7 @@
   line-height: 150%;
   color: $color-default-white;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 10px;
     vertical-align: middle;
   }
@@ -152,7 +162,11 @@
   margin: 0;
   margin-bottom: 47px;
 
-  @include vp-1023 {
+  @include vp-1279 {
+    width: 90%;
+  }
+
+  @include vp-1199 {
     width: 100%;
     font-size: 12px;
     margin-bottom: 29px;
@@ -180,7 +194,11 @@
     border: 4px solid #02227a;
   }
 
-  @include vp-1023 {
+  @include vp-1279 {
+    width: 90%;
+  }
+
+  @include vp-1199 {
     width: 100%;
     font-size: 10px;
     line-height: 12px;

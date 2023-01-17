@@ -4,7 +4,7 @@
   padding-left: 120px;
   padding-bottom: 40px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 100%;
     padding: 63px 0;
     padding-bottom: 45px;
@@ -22,7 +22,7 @@
   margin: 0;
   margin-bottom: 37px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 100%;
     font-size: 42px;
     line-height: 50px;
@@ -77,7 +77,7 @@
     width: 28%;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     &--one {
       width: 53%;
 
@@ -124,7 +124,7 @@
   margin: 0;
   margin-bottom: 3px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 20px;
     margin-bottom: 6px;
   }
@@ -142,7 +142,7 @@
   text-decoration: none;
   margin: 0;
 
-  @include vp-1023 {
+  @include vp-1199 {
     font-size: 18px;
     line-height: 152.34%;
   }

@@ -2,7 +2,7 @@
   background-image: linear-gradient(90deg, rgba(16, 38, 84, 1) 50%, rgba(255, 255, 255, 1) 50%);
   border-top: 1px solid #74819c;
 
-  @include vp-1023 {
+  @include vp-1199 {
     background-image: linear-gradient(180deg, rgba(16, 38, 84, 1) 48%, rgba(255, 255, 255, 1) 48%);
     border-top: none;
   }
@@ -19,7 +19,7 @@
   padding: 0 103px;
   margin: 0 auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     flex-direction: column;
     padding: 0 129px;
   }

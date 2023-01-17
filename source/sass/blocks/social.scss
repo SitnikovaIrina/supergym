@@ -2,7 +2,7 @@
   width: 25%;
   padding-top: 4px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 20%;
     padding-top: 11px;
   }
@@ -23,7 +23,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 75%;
   }
 
@@ -54,7 +54,7 @@
     border-radius: 50%;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 5px;
   }
 }

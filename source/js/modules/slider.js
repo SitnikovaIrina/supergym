@@ -45,7 +45,7 @@ const swiperCoaches = new Swiper('.coaches__slider', {
       spaceBetween: 35,
     },
 
-    1024: {
+    1200: {
       slidesPerView: 4,
     },
   },
