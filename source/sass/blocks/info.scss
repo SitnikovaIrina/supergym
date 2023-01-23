@@ -3,12 +3,13 @@
   border-top: 1px solid #74819c;
 
   @include vp-1199 {
-    background-image: linear-gradient(180deg, rgba(16, 38, 84, 1) 48%, rgba(255, 255, 255, 1) 48%);
+    background-image: unset;
+    //background-image: linear-gradient(180deg, rgba(16, 38, 84, 1) 48%, rgba(255, 255, 255, 1) 48%);
     border-top: none;
   }
 
   @include vp-767 {
-    background-image: linear-gradient(180deg, rgba(16, 38, 84, 1) 43%, rgba(255, 255, 255, 1) 43%);
+    //background-image: linear-gradient(180deg, rgba(16, 38, 84, 1) 43%, rgba(255, 255, 255, 1) 43%);
   }
 }
 
@@ -21,10 +22,11 @@
 
   @include vp-1199 {
     flex-direction: column;
-    padding: 0 129px;
+    padding: 0;
+    //padding: 0 129px;
   }
 
   @include vp-767 {
-    padding: 0 15px;
+    //padding: 0 15px;
   }
 }

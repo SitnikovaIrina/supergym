@@ -51,7 +51,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 5% 23% 5% 1fr;
-  grid-template-rows: 1fr 130px 1fr;
+  grid-template-rows: min-content 130px min-content;
 
   @include vp-1199 {
     grid-template-columns: 1fr 30px 1fr;
@@ -68,7 +68,7 @@
 .advantages__item {
   display: grid;
   grid-template-columns: min-content 30px 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: min-content;
 
   &--area {
     grid-column: 1 / 2;

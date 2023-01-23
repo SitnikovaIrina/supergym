@@ -80,80 +80,72 @@
 }
 
 .tickets__tabs-nav {
+  width: 29%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style-type: none;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @include vp-1199 {
+    width: 75%;
+  }
 
   @include vp-767 {
+    width: 100%;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
   }
 }
 
 .tickets__tab-nav-link {
+  position: relative;
   font-family: $RobotoCondensed;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
   color: rgba(16, 38, 84, 0.5);
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
-  padding: 10px 23px;
+  padding: 10px 0;
   cursor: pointer;
 
   &:hover {
     color: $dark-blue;
-    border-bottom: 2px solid #103aae;
-  }
-
-  @include vp-1199 {
-    font-size: 18px;
-    padding: 10px 27px;
-  }
-
-  @include vp-767 {
-    position: relative;
-    font-size: 16px;
-    padding: 14px 0;
-    border-bottom: none;
-
-    &:hover {
-      border-bottom: none;
-
-      &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 2px;
-        background-color: #103aae;
-        bottom: -2px;
-        left: 0;
-      }
-    }
-  }
-}
-
-.tickets__tab-nav-link.is-active {
-  border-color: $pink;
-  color: $dark-blue;
-  z-index: 1;
-
-  @include vp-767 {
-    border-color: unset;
-    border-bottom: none;
 
     &::after {
       position: absolute;
       content: "";
       width: 100%;
       height: 2px;
-      background-color: $pink;
+      background-color: #103aae;
       bottom: -2px;
       left: 0;
     }
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    padding: 13px 0;
+  }
+}
+
+.tickets__tab-nav-link.is-active {
+  color: $dark-blue;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $pink;
+    bottom: -2px;
+    left: 0;
   }
 }
 

@@ -41,7 +41,6 @@
 
 .promo__conteiner {
   width: 70%;
-  //padding: 0 15px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -52,6 +51,7 @@
 
   @include vp-1199 {
     width: 100%;
+    max-width: 200px;
     justify-content: space-between;
     margin-bottom: 2px;
   }
@@ -99,7 +99,7 @@
 .promo__item {
   margin-bottom: 4px;
 
-  @include vp-767 {
+  @include vp-1199 {
     margin-bottom: 0;
   }
 }
@@ -168,6 +168,7 @@
 
   @include vp-1199 {
     width: 100%;
+    max-width: 200px;
     font-size: 12px;
     margin-bottom: 29px;
   }
@@ -213,5 +214,7 @@
 
 .promo img {
   width: 100%;
-  height: auto;
+  //height: auto;
+  height: 100%;
+  object-fit: cover;
 }

@@ -86,7 +86,6 @@
     bottom: 0;
     right: 0;
     z-index: 2;
-    //background-image: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
     background-color: rgba(16, 37, 84, 0.13);
   }
 
@@ -127,7 +126,7 @@
 .coaches__slider-item-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 12 / 13.4;
+  aspect-ratio: 12 / 13.6;
   object-fit: cover;
   object-position: center center;
 

@@ -12,6 +12,9 @@
 }
 
 .page-header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
   width: 100%;
   max-width: 1366px;
   min-height: 658px;
@@ -19,31 +22,44 @@
   padding: 30px 94px;
 
   @include vp-1199 {
-    padding: 30px 45px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 30px 40px;
     padding-bottom: 28px;
     min-height: 554px;
   }
 
   @include vp-767 {
-    padding: 15px;
+    padding: 15px 10px;
     min-height: 491px;
   }
 }
 
 .page-header__cap {
-  width: 100%;
+  //width: 100%;
+  width: 245px;
   display: flex;
+  //justify-content: space-between;
   flex-wrap: wrap;
 
   @include vp-1199 {
-    margin-bottom: 7px;
+    width: 85%;
+    //margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    width: 75%;
   }
 }
 
 .page-header__tel {
-  margin-left: auto;
+  //width: 15%;
+  //max-width: 180px;
+  //margin-left: auto;
   margin-bottom: auto;
+  margin-left: auto;
   padding: 0 10px;
+  padding-left: 13px;
 
   font-family: $AlumniSans;
   font-style: normal;
@@ -67,8 +83,9 @@
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.02em;
-    padding: 0;
-    padding-top: 5px;
+    padding: 5px;
+    margin-bottom: unset;
+    height: min-content;
   }
 
   @include vp-767 {
@@ -79,30 +96,36 @@
 }
 
 .page-header__conteiner {
+  //position: relative;
   display: flex;
+  //width: 85%;
 
   @include vp-1199 {
+    width: 100%;
+    max-width: 678px;
     margin: 0 auto;
   }
 }
 
 .page-header__info {
-  width: 40%;
+  width: 48%;
   padding-bottom: 10px;
-  padding-top: 70px;
-  padding-right: 5.5%;
+  padding-top: 0;
+  padding-right: 65px;
+  padding-left: 0;
+
 
   @include vp-1199 {
     width: 78%;
     padding: 0;
-    padding-top: 50px;
-    padding-right: 30px;
+    padding-top: 62px;
+    padding-right: 28px;
   }
 
   @include vp-767 {
     width: 100%;
     padding-right: 0;
-    padding-top: 56px;
+    padding-top: 65px;
   }
 }
 
@@ -263,13 +286,14 @@
 
 .page-header img {
   display: block;
-  margin-top: -30px;
-  width: 100%;
+  //margin-top: -30px;
+  margin-top: 20px;
+  //width: 100%;
   object-fit: cover;
 
   @include vp-1199 {
-    height: 100%;
-    margin-top: 0;
+    height: auto;
+    margin-top: 13px;
   }
 
   @include vp-767 {

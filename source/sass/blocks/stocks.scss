@@ -42,24 +42,8 @@
 
 .stocks__content {
   display: flex;
-  align-items: center;
 
   @include vp-1199 {
-    flex-direction: column;
-  }
-}
-
-.stocks__list {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  width: 100%;
-
-  @include vp-1199 {
-    display: flex;
-  }
-
-  @include vp-767 {
     flex-direction: column;
   }
 }
@@ -84,43 +68,24 @@
 }
 
 .stocks__img {
-  width: 280px;
-  height: 462px;
-  overflow: hidden;
+  width: 85%;
 
   @include vp-1199 {
-    width: 60%;
+    width: 59%;
   }
 
   @include vp-767 {
     width: auto;
-    height: 100%;
   }
 }
 
 .stocks__item-main img {
-  width: 140%;
-  height: 140%;
-  aspect-ratio: 9 / 13.4;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: -32px -180px;
-
-  @include vp-1199 {
-    width: 150%;
-    height: 150%;
-    object-position: 0 -196px;
-  }
-
-  @include vp-767 {
-    aspect-ratio: 9 / 9.3;
-    object-position: unset;
-    width: 100%;
-    height: auto;
-  }
 }
 
 .stocks__item-main-container {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,7 +159,9 @@
   text-transform: uppercase;
   text-decoration: underline;
   color: $color-default-white;
-  margin-bottom: 10px;
+  padding: 10px;
+  padding-top: 30px;
+  padding-left: 0;
   user-select: none;
 
   &:active {
@@ -209,6 +176,28 @@
     display: block;
     width: 100%;
     text-align: center;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+.stocks__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+
+  @include vp-1199 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
   }
 }
 
@@ -216,7 +205,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  min-height: 211px;
+  height: 100%;
   padding: 12px 28px;
   border: 7px solid transparent;
   border-image: linear-gradient(170deg, #d10a42 0, #00359f 100%);
@@ -227,11 +216,12 @@
   }
 
   @include vp-1199 {
-    width: 50%;
+    width: 48%;
+    height: auto;
+    min-height: 211px;
     margin-bottom: 30px;
 
     &:not(:last-child) {
-      margin-right: 30px;
       margin-bottom: 30px;
     }
   }
@@ -293,7 +283,8 @@
   text-transform: uppercase;
   text-decoration: underline;
   color: #1c3374;
-  margin-bottom: 17px;
+  padding: 17px;
+  padding-left: 0;
   user-select: none;
 
   &:active {
@@ -307,5 +298,6 @@
   @include vp-767 {
     width: 100%;
     text-align: center;
+    padding: 17px 0;
   }
 }

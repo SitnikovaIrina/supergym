@@ -21,16 +21,16 @@
         <div class="page-header__wrapper">
 
           <div class="page-header__cap">
-            <a class="logo">
-              <svg class="logo__svg" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="119" height="23">
-                <use xlink:href="./img/sprite.svg#logo"></use>
-              </svg>
-            </a>
             <a class="page-header__tel" href="tel:+79999999999">8-800-555-55-55</a>
           </div>
 
           <div class="page-header__conteiner">
             <div class="page-header__info">
+              <a class="logo">
+                <svg class="logo__svg" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="119" height="23">
+                  <use xlink:href="./img/sprite.svg#logo"></use>
+                </svg>
+              </a>
               <p class="page-header__city">омск</p>
               <div class="page-header__city-conteiner">
                 <div class="page-header__desk">
@@ -45,7 +45,8 @@
 
             <div class="page-header__img">
               <picture>
-                <source srcset="img/webp/header.webp 1x, img/webp/header@2x.webp 2x" data-srcset="img/webp/header.webp 1x, img/webp/header@2x.webp 2x" type="image/webp">
+                <source media="(max-width: 1199px)" srcset="img/webp/header-tablet.webp 1x, img/webp/header-tablet@2x.webp 2x" data-srcset="img/webp/header-tablet.webp 1x, img/webp/header-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1200px)" srcset="img/webp/header.webp 1x, img/webp/header@2x.webp 2x" data-srcset="img/webp/header.webp 1x, img/webp/header@2x.webp 2x" type="image/webp">
                 <img src="img/jpeg/header.jpg" srcset="img/jpeg/header@2x.jpg 2x" data-src="img/jpeg/header.jpg" data-srcset="img/jpeg/header@2x.jpg 2x" width="500" height="556" alt="Фото парня в футболке супермена.">
               </picture>
             </div>
@@ -396,10 +397,8 @@
 
                 </div>
 
-
-                <div class="swiper-button-next"></div>
-
                 <!--Кнопка навигации-->
+                <div class="swiper-button-next"></div>
 
               </div>
             </div>
@@ -485,7 +484,7 @@
                 <div class="stocks__img">
                   <picture>
                     <source media="(max-width: 767px)" srcset="img/webp/stocks-mobile.webp 1x, img/webp/stocks-mobile@2x.webp 2x" data-srcset="img/webp/stocks-mobile.webp 1x, img/webp/stocks-mobile@2x.webp 2x" type="image/webp">
-                    <source media="(max-width: 1200px)" srcset="img/webp/stocks.webp 1x, img/webp/stocks@2x.webp 2x" data-srcset="img/webp/stocks.webp 1x, img/webp/stocks@2x.webp 2x" type="image/webp">
+                    <source media="(max-width: 1200px)" srcset="img/webp/stocks-tablet.webp 1x, img/webp/stocks-tablet@2x.webp 2x" data-srcset="img/webp/stocks-tablet.webp 1x, img/webp/stocks-tablet@2x.webp 2x" type="image/webp">
                     <source media="(min-width: 1200px)" srcset="img/webp/stocks.webp 1x, img/webp/stocks@2x.webp 2x" data-srcset="img/webp/stocks.webp 1x, img/webp/stocks@2x.webp 2x" type="image/webp">
                     <img src="img/jpeg/stocks.jpg" srcset="img/jpeg/stocks@2x.jpg 2x" data-src="img/jpeg/stocks.jpg" data-srcset="img/jpeg/stocks@2x.jpg 2x" width="280" height="462" alt="Фото девушки в спортивной одежде.">
                   </picture>
@@ -580,44 +579,48 @@
           <div class="info__wrapper">
             <h2 class="visually-hidden">Контактная информация</h2>
             <section class="user-info">
-              <h3>Бесплатное занятие </h3>
-              <form class="form" action="https://echo.htmlacademy.ru" method="get" id="form">
-                <div>
-                  <label class="visually-hidden" for="name">Имя</label>
-                  <input type="text" name="name" id="name" minlength="1" required placeholder="Имя">
+              <div class="user-info__wrapper">
+                <h3>Бесплатное занятие </h3>
+                <form class="form" action="https://echo.htmlacademy.ru" method="get" id="form">
+                  <div>
+                    <label class="visually-hidden" for="name">Имя</label>
+                    <input type="text" name="name" id="name" minlength="1" required placeholder="Имя">
 
-                  <label class="visually-hidden" for="phone">Телефон</label>
-                  <input class="form__phone" type="tel" name="phone" id="phone" value="" minlength="16" maxlength="16" required placeholder="Телефон">
-                </div>
-                <button class="form__btn" type="submit">отправить</button>
-              </form>
+                    <label class="visually-hidden" for="phone">Телефон</label>
+                    <input class="form__phone" type="tel" name="phone" id="phone" value="" pattern="[+]7\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required placeholder="Телефон">
+                  </div>
+                  <button class="form__btn" type="submit">отправить</button>
+                </form>
+              </div>
             </section>
 
             <section class="contacts">
-              <h3>Контакты</h3>
+              <div class="contacts__wrapper">
+                <h3>Контакты</h3>
 
-              <div class="contacts__list-conteiner">
-                <ul class="contacts__list contacts__list--one">
-                  <li class="contacts__item">
-                    <h4>Адрес:</h4>
-                    <address>г. Омск, ул. 60 лет Октября, 7</address>
-                  </li>
-                  <li class="contacts__item">
-                    <h4>График работы:</h4>
-                    <p>Пн-Вс: с 8:00 до 22:00</p>
-                  </li>
-                </ul>
+                <div class="contacts__list-conteiner">
+                  <ul class="contacts__list contacts__list--one">
+                    <li class="contacts__item">
+                      <h4>Адрес:</h4>
+                      <address>г. Омск, ул. 60 лет Октября, 7</address>
+                    </li>
+                    <li class="contacts__item">
+                      <h4>График работы:</h4>
+                      <p>Пн-Вс: с 8:00 до 22:00</p>
+                    </li>
+                  </ul>
 
-                <ul class="contacts__list contacts__list--two">
-                  <li class="contacts__item">
-                    <h4>Телефон:</h4>
-                    <a href="tel:+79999999999">8-800-555-55-55</a>
-                  </li>
-                  <li class="contacts__item">
-                    <h4>Email:</h4>
-                    <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-                  </li>
-                </ul>
+                  <ul class="contacts__list contacts__list--two">
+                    <li class="contacts__item">
+                      <h4>Телефон:</h4>
+                      <a href="tel:+79999999999">8-800-555-55-55</a>
+                    </li>
+                    <li class="contacts__item">
+                      <h4>Email:</h4>
+                      <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </section>
           </div>
@@ -628,22 +631,20 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
 
-          <nav class="footer-nav">
-            <ul class="footer-nav__list">
-              <li class="footer-nav__item footer-nav__item--logo">
-                <a class="logo logo--footer">
-                  <svg class="logo__svg logo__svg--footer" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="119" height="23">
-                    <use xlink:href="./img/sprite.svg#logo"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-nav__item footer-nav__item--services"><a class="footer-nav__link" href="#">Услуги</a></li>
-              <li class="footer-nav__item footer-nav__item--tickets"><a class="footer-nav__link" href="#">Абонементы</a></li>
-              <li class="footer-nav__item footer-nav__item--stocks"><a class="footer-nav__link" href="#">Акции</a></li>
-              <li class="footer-nav__item footer-nav__item--coaches"><a class="footer-nav__link" href="#">Тренеры</a></li>
-              <li class="footer-nav__item footer-nav__item--schedule"><a class="footer-nav__link" href="#">Расписание</a></li>
-            </ul>
-          </nav>
+          <a class="logo logo--footer">
+            <svg class="logo__svg logo__svg--footer" role="img" aria-label="Логотип компании." aria-hidden="true" focusable="false" width="119" height="23">
+              <use xlink:href="./img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item footer-nav__item--logo"></li>
+            <li class="footer-nav__item footer-nav__item--services"><a class="footer-nav__link" href="#">Услуги</a></li>
+            <li class="footer-nav__item footer-nav__item--tickets"><a class="footer-nav__link" href="#">Абонементы</a></li>
+            <li class="footer-nav__item footer-nav__item--stocks"><a class="footer-nav__link" href="#">Акции</a></li>
+            <li class="footer-nav__item footer-nav__item--coaches"><a class="footer-nav__link" href="#">Тренеры</a></li>
+            <li class="footer-nav__item footer-nav__item--schedule"><a class="footer-nav__link" href="#">Расписание</a></li>
+          </ul>
 
           <div class="social">
             <ul class="social__list">

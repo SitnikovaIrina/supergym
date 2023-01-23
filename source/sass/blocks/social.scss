@@ -1,20 +1,17 @@
 .social {
-  width: 25%;
   padding-top: 4px;
+  min-width: 118px;
 
   @include vp-1199 {
-    width: 20%;
     padding-top: 11px;
   }
 
   @include vp-767 {
-    width: 100%;
     padding-top: 0;
   }
 }
 
 .social__list {
-  width: 70%;
   padding: 0;
   margin: 0;
   margin-left: auto;
@@ -23,12 +20,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
 
-  @include vp-1199 {
-    width: 75%;
-  }
-
   @include vp-767 {
-    width: 100%;
     justify-content: flex-start;
   }
 }

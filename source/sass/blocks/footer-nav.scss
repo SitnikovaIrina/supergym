@@ -15,25 +15,25 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style-type: none;
 
-  @include vp-1199 {
-    justify-content: space-between;
-  }
-
   @include vp-767 {
+    width: 86%;
+    max-width: 258px;
     display: grid;
-    grid-template-columns: 1fr 9% 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content min-content;
+    margin-bottom: 21px;
   }
 }
 
 .footer-nav__item {
   &--logo {
-    margin-right: auto;
+    width: 0;
   }
 
   @include vp-767 {
@@ -96,6 +96,9 @@
   }
 
   @include vp-767 {
+    display: block;
+    padding: 10px;
+    padding-bottom: 9px;
     padding-left: 0;
     font-size: 16px;
     line-height: 19px;

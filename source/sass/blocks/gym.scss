@@ -156,8 +156,12 @@
     right: 50%;
     transform: translate(-50%, -50%);
     top: 591px;
-    width: 266px;
-    height: 167px;
+    //width: 266px;
+    //height: 167px;
+    min-width: 266px;
+    min-height: 167px;
+    width: 35%;
+    height: auto;
   }
 
   @include vp-767 {

@@ -73,7 +73,7 @@ const swiperReviews = new Swiper('.reviews__slider', {
     sensitivity: 1,
   },*/
 
-  // autoHeight: true,
+  autoHeight: true,
 
   loopedSlides: 0,
 
