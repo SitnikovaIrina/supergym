@@ -674,12 +674,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .page-header__tel {
-  margin-bottom: auto;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   margin-left: auto;
   padding: 0 10px;
   padding-left: 13px;
@@ -1543,6 +1547,7 @@ button,
 
 .promo__wrapper-text {
   width: 43%;
+  padding: 82px 30px;
   background-color: #ed0233;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1551,16 +1556,16 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 .promo__conteiner {
-  width: 70%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1628,7 +1633,7 @@ button,
 }
 
 .promo__wrapper-text p {
-  width: 70%;
+  width: 78%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1643,7 +1648,7 @@ button,
 }
 
 .promo__wrapper-text a {
-  width: 70%;
+  width: 80%;
   display: block;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -1721,6 +1726,7 @@ button,
 }
 
 .stocks__item-main-container {
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2232,8 +2238,8 @@ button,
 }
 
 .coaches__slider-item-img--coach-2 {
-  -o-object-position: -19px -6px;
-  object-position: -19px -6px;
+  -o-object-position: -17px -6px;
+  object-position: -17px -6px;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -2345,9 +2351,17 @@ button,
   left: auto;
 }
 
+.swiper-button-next--reviews {
+  top: 120px;
+}
+
 .swiper-button-prev {
   left: -60px;
   right: auto;
+}
+
+.swiper-button-prev--reviews {
+  top: 120px;
 }
 
 .swiper-button-next::after,
@@ -2369,7 +2383,7 @@ button,
   max-width: 1366px;
   padding: 14px 103px;
   margin: 0 auto;
-  margin-bottom: 107px;
+  margin-bottom: 104px;
 }
 
 .reviews__title {
@@ -2522,6 +2536,7 @@ button,
   padding: 10px;
   padding-top: 25px;
   padding-right: 20px;
+  margin-bottom: 0;
 }
 
 .logo__svg--footer {
@@ -2721,11 +2736,11 @@ button,
   }
 
   .promo__wrapper-text p {
-    width: 90%;
+    width: 100%;
   }
 
   .promo__wrapper-text a {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -2746,6 +2761,8 @@ button,
 
   .page-header__cap {
     width: 85%;
+    -ms-flex-line-pack: unset;
+    align-content: unset;
   }
 
   .page-header__tel {
@@ -3051,17 +3068,18 @@ button,
   }
 
   .promo__conteiner {
-    width: 100%;
-    max-width: 200px;
+    width: 90%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 2px;
   }
 
   .promo__wrapper-text h2 {
-    font-size: 48px;
-    width: 60%;
+    font-size: 70px;
     padding: 8px;
   }
 
@@ -3069,28 +3087,23 @@ button,
     padding-left: 25px;
   }
 
-  .promo__item {
-    margin-bottom: 0;
-  }
-
   .promo__item h3 {
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 0;
   }
 
   .promo__desk {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .promo__text {
-    font-size: 10px;
+    font-size: 12px;
     vertical-align: middle;
   }
 
   .promo__wrapper-text p {
     width: 100%;
-    max-width: 200px;
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 29px;
   }
 
@@ -3327,6 +3340,48 @@ button,
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
+  }
+
+  .promo__conteiner {
+    width: 100%;
+    max-width: 250px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+
+  .promo__wrapper-text h2 {
+    font-size: 48px;
+    width: 58%;
+    padding: 8px;
+  }
+
+  .promo__list {
+    padding-left: 29px;
+  }
+
+  .promo__item {
+    margin-bottom: 0;
+  }
+
+  .promo__item h3 {
+    font-size: 12px;
+  }
+
+  .promo__desk {
+    font-size: 24px;
+  }
+
+  .promo__text {
+    font-size: 10px;
+  }
+
+  .promo__wrapper-text p {
+    width: 100%;
+    max-width: 250px;
+    font-size: 12px;
+    margin-bottom: 27px;
   }
 }
 
@@ -3721,11 +3776,31 @@ button,
   }
 
   .promo__conteiner {
+    max-width: 350px;
     margin-bottom: 0;
   }
 
   .promo__wrapper-text h2 {
+    font-size: 48px;
     padding: 6px;
+  }
+
+  .promo__item h3 {
+    font-size: 14px;
+  }
+
+  .promo__desk {
+    font-size: 28px;
+  }
+
+  .promo__text {
+    font-size: 14px;
+  }
+
+  .promo__wrapper-text p {
+    max-width: 350px;
+    font-size: 16px;
+    margin-bottom: 31px;
   }
 
   .stocks__wrapper {
@@ -4039,6 +4114,42 @@ button,
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .gym__img {
     background-image: url("../img/jpeg/gym-desktop@2x.jpg");
+  }
+}
+
+@media (max-width: 449px) {
+  .swiper-button-next--reviews {
+    top: 150px;
+  }
+
+  .swiper-button-prev--reviews {
+    top: 150px;
+  }
+}
+
+@media (max-width: 374px) {
+  .promo__item h3 {
+    font-size: 12px;
+  }
+
+  .promo__desk {
+    font-size: 24px;
+  }
+
+  .promo__text {
+    font-size: 10px;
+  }
+
+  .promo__wrapper-text p {
+    font-size: 12px;
+  }
+
+  .swiper-button-next--reviews {
+    top: 171px;
+  }
+
+  .swiper-button-prev--reviews {
+    top: 171px;
   }
 }
 

@@ -20,12 +20,12 @@
 
 .promo__wrapper-text {
   width: 43%;
+  padding: 82px 30px;
   background-color: $red-pink;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-
 
   @include vp-1199 {
     padding: 46px;
@@ -40,7 +40,7 @@
 }
 
 .promo__conteiner {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -50,13 +50,21 @@
   }
 
   @include vp-1199 {
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  @include vp-1023 {
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     justify-content: space-between;
     margin-bottom: 2px;
   }
 
   @include vp-767 {
+    max-width: 350px;
     margin-bottom: 0;
   }
 }
@@ -76,12 +84,18 @@
   color: $color-default-white;
 
   @include vp-1199 {
+    font-size: 70px;
+    padding: 8px;
+  }
+
+  @include vp-1023 {
     font-size: 48px;
-    width: 60%;
+    width: 58%;
     padding: 8px;
   }
 
   @include vp-767 {
+    font-size: 48px;
     padding: 6px;
   }
 }
@@ -94,12 +108,16 @@
   @include vp-1199 {
     padding-left: 25px;
   }
+
+  @include vp-1023 {
+    padding-left: 29px;
+  }
 }
 
 .promo__item {
   margin-bottom: 4px;
 
-  @include vp-1199 {
+  @include vp-1023 {
     margin-bottom: 0;
   }
 }
@@ -114,8 +132,20 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 0;
+  }
+
+  @include vp-1023 {
+    font-size: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+
+  @include vp-374 {
+    font-size: 12px;
   }
 }
 
@@ -130,6 +160,18 @@
   border-top: 1px solid $color-default-white;
 
   @include vp-1199 {
+    font-size: 28px;
+  }
+
+  @include vp-1023 {
+    font-size: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+  }
+
+  @include vp-374 {
     font-size: 24px;
   }
 }
@@ -145,13 +187,25 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    font-size: 10px;
+    font-size: 12px;
     vertical-align: middle;
+  }
+
+  @include vp-1023 {
+    font-size: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+
+  @include vp-374 {
+    font-size: 10px;
   }
 }
 
 .promo__wrapper-text p {
-  width: 70%;
+  width: 78%;
   font-family: $RobotoCondensed;
   font-style: normal;
   font-weight: 400;
@@ -163,19 +217,35 @@
   margin-bottom: 47px;
 
   @include vp-1279 {
-    width: 90%;
+    width: 100%;
   }
 
   @include vp-1199 {
     width: 100%;
-    max-width: 200px;
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 29px;
+  }
+
+  @include vp-1023 {
+    width: 100%;
+    max-width: 250px;
+    font-size: 12px;
+    margin-bottom: 27px;
+  }
+
+  @include vp-767 {
+    max-width: 350px;
+    font-size: 16px;
+    margin-bottom: 31px;
+  }
+
+  @include vp-374 {
+    font-size: 12px;
   }
 }
 
 .promo__wrapper-text a {
-  width: 70%;
+  width: 80%;
   display: block;
   font-family: $RobotoCondensed;
   font-style: normal;
@@ -196,7 +266,7 @@
   }
 
   @include vp-1279 {
-    width: 90%;
+    width: 100%;
   }
 
   @include vp-1199 {
@@ -214,7 +284,6 @@
 
 .promo img {
   width: 100%;
-  //height: auto;
   height: 100%;
   object-fit: cover;
 }

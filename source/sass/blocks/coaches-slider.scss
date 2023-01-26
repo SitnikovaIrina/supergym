@@ -135,7 +135,7 @@
   }
 
   &--coach-2 {
-    object-position: -19px -6px;
+    object-position: -17px -6px;
     transform: scale(1.2);
   }
 
@@ -262,8 +262,24 @@
   right: -60px;
   left: auto;
 
+  &--reviews {
+    top: 120px;
+  }
+
   @include vp-767 {
     right: -40px;
+  }
+
+  @include vp-449 {
+    &--reviews {
+      top: 150px;
+    }
+  }
+
+  @include vp-374 {
+    &--reviews {
+      top: 171px;
+    }
   }
 }
 
@@ -271,8 +287,24 @@
   left: -60px;
   right: auto;
 
+  &--reviews {
+    top: 120px;
+  }
+
   @include vp-767 {
     left: -40px;
+  }
+
+  @include vp-449 {
+    &--reviews {
+      top: 150px;
+    }
+  }
+
+  @include vp-374 {
+    &--reviews {
+      top: 171px;
+    }
   }
 }
 

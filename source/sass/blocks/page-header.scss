@@ -36,15 +36,14 @@
 }
 
 .page-header__cap {
-  //width: 100%;
   width: 245px;
   display: flex;
-  //justify-content: space-between;
+  align-content: flex-start;
   flex-wrap: wrap;
 
   @include vp-1199 {
     width: 85%;
-    //margin-bottom: 7px;
+    align-content: unset;
   }
 
   @include vp-767 {
@@ -53,10 +52,7 @@
 }
 
 .page-header__tel {
-  //width: 15%;
-  //max-width: 180px;
-  //margin-left: auto;
-  margin-bottom: auto;
+  height: min-content;
   margin-left: auto;
   padding: 0 10px;
   padding-left: 13px;
@@ -96,9 +92,7 @@
 }
 
 .page-header__conteiner {
-  //position: relative;
   display: flex;
-  //width: 85%;
 
   @include vp-1199 {
     width: 100%;
@@ -286,9 +280,7 @@
 
 .page-header img {
   display: block;
-  //margin-top: -30px;
   margin-top: 20px;
-  //width: 100%;
   object-fit: cover;
 
   @include vp-1199 {
